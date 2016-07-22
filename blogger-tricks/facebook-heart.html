@@ -1,0 +1,353 @@
+<script type="text/javascript">
+<!--  
+
+
+
+function converter(){
+
+
+
+var ss = document.verticaltext.txtchange.value;
+
+
+
+var newStr="";
+
+
+
+for(var i=0;i<ss.length;i++){var ch=ss.charAt(i);if(ch=='A')newStr=newStr+"_AA" + '\n' + "A__A"+ '\n' + "AAAA"+ '\n' +"A__A"+ '\n' +"A__A" + '\n' + "" + '\n' + "";else if(ch=='B')newStr=newStr+"BBBB" + '\n' + "B___B"+ '\n' + "BBBB"+ '\n' +"B___B"+ '\n' +"BBBB" + '\n' + "" + '\n' + "";else if(ch=='C')newStr=newStr+"_CCC" + '\n' + "C"+ '\n' + "C"+ '\n' +"C"+ '\n' +"_CCC" + '\n' + "" + '\n' + "";else if(ch=='D')newStr=newStr+"DDD" + '\n' + "D__D"+ '\n' + "D__D"+ '\n' +"D__D"+ '\n' +"DDD" + '\n' + "" + '\n' + "";else if(ch=='E')newStr=newStr+"EEEE" + '\n' + "E"+ '\n' + "EEE"+ '\n' +"E"+ '\n' +"EEEE" + '\n' + "" + '\n' + "";else if(ch=='F')newStr=newStr+"FFFF" + '\n' + "F"+ '\n' + "FFF"+ '\n' +"F"+ '\n' +"F" + '\n' + "" + '\n' + "";else if(ch=='G')newStr=newStr+"_GGG" + '\n' + "G"+ '\n' + "G__GG"+ '\n' +"G___G"+ '\n' +"_GGG" + '\n' + "" + '\n' + "";else if(ch=='H')newStr=newStr+"H__H" + '\n' + "H__H"+ '\n' + "HHHH"+ '\n' +"H__H"+ '\n' +"H__H" + '\n' + "" + '\n' + "";else if(ch=='I')newStr=newStr+"III" + '\n' + "_I"+ '\n' + "_I"+ '\n' +"_I"+ '\n' +"III" + '\n' + "" + '\n' + "";else if(ch=='J')newStr=newStr+"____J" + '\n' + "____J"+ '\n' + "____J"+ '\n' +"J___J"+ '\n' +"_JJJ_" + '\n' + "" + '\n' + "";else if(ch=='K')newStr=newStr+"K__K" + '\n' + "K_K"+ '\n' + "KK"+ '\n' +"K_K"+ '\n' +"K__K" + '\n' + "" + '\n' + "";else if(ch=='L')newStr=newStr+"L" + '\n' + "L"+ '\n' + "L"+ '\n' +"L"+ '\n' +"LLLL" + '\n' + "" + '\n' + "";else if(ch=='M')newStr=newStr+"M___M" + '\n' + "MM_MM"+ '\n' + "M_M_M"+ '\n' +"M___M"+ '\n' +"M___M" + '\n' + "" + '\n' + "";else if(ch=='N')newStr=newStr+"N___N" + '\n' + "NN__N"+ '\n' + "N_N_N"+ '\n' +"N__NN"+ '\n' +"N___N" + '\n' + "" + '\n' + "";else if(ch=='O')newStr=newStr+"_OOO" + '\n' + "O___O"+ '\n' + "O___O"+ '\n' +"O___O"+ '\n' +"_OOO" + '\n' + "" + '\n' + "";else if(ch=='P')newStr=newStr+"PPPP" + '\n' + "P___P"+ '\n' + "PPPP"+ '\n' +"P"+ '\n' +"P" + '\n' + "" + '\n' + "";else if(ch=='Q')newStr=newStr+"_QQQ_" + '\n' + "Q___Q"+ '\n' + "Q___Q"+ '\n' +"Q__QQ"+ '\n' +"_QQQQ" + '\n' + "_____Q" + '\n' + "";else if(ch=='R')newStr=newStr+"RRRR" + '\n' + "R___R"+ '\n' + "RRRR"+ '\n' +"R_R"+ '\n' +"R__RR" + '\n' + "" + '\n' + "";else if(ch=='S')newStr=newStr+"_SSS" + '\n' + "S"+ '\n' + "_SSS"+ '\n' +"____S"+ '\n' +"SSSS" + '\n' + "" + '\n' + "";else if(ch=='T')newStr=newStr+"TTTTTT" + '\n' + "__TT"+ '\n' + "__TT"+ '\n' +"__TT"+ '\n' +"__TT" + '\n' + "" + '\n' + "";else if(ch=='U')newStr=newStr+"U___U" + '\n' + "U___U"+ '\n' + "U___U"+ '\n' +"U___U"+ '\n' +"_UUU" + '\n' + "" + '\n' + "";else if(ch=='V')newStr=newStr+"V_____V" + '\n' + "V_____V"+ '\n' + "_V___V"+ '\n' +"__V_V"+ '\n' +"___V" + '\n' + "" + '\n' + "";else if(ch=='W')newStr=newStr+"W_____W" + '\n' + "W_____W"+ '\n' + "W__W__W"+ '\n' +"_W_W_W"+ '\n' +"__W_W" + '\n' + "" + '\n' + "";else if(ch=='X')newStr=newStr+"X___X" + '\n' + "_X_X"+ '\n' + "__X"+ '\n' +"_X_X"+ '\n' +"X___X" + '\n' + "" + '\n' + "";else if(ch=='Y')newStr=newStr+"Y___Y" + '\n' + "_Y_Y"+ '\n' + "__Y"+ '\n' +"__Y"+ '\n' +"__Y" + '\n' + "" + '\n' + "";else if(ch=='Z')newStr=newStr+"ZZZZZ" + '\n' + "____Z"+ '\n' + "___Z"+ '\n' +"__Z"+ '\n' +"ZZZZZ" + '\n' + "" + '\n' + "";else if(ch==' ')newStr=newStr+"" + '\n' + ""+ '\n' + ""+ '\n' +"";else if(ch=='a')newStr=newStr+"_AA" + '\n' + "A__A"+ '\n' + "AAAA"+ '\n' +"A__A"+ '\n' +"A__A" + '\n' + "" + '\n' + "";else if(ch=='b')newStr=newStr+"BBBB" + '\n' + "B___B"+ '\n' + "BBBB"+ '\n' +"B___B"+ '\n' +"BBBB" + '\n' + "" + '\n' + "";else if(ch=='c')newStr=newStr+"_CCC" + '\n' + "C"+ '\n' + "C"+ '\n' +"C"+ '\n' +"_CCC" + '\n' + "" + '\n' + "";else if(ch=='d')newStr=newStr+"DDD" + '\n' + "D__D"+ '\n' + "D__D"+ '\n' +"D__D"+ '\n' +"DDD" + '\n' + "" + '\n' + "";else if(ch=='e')newStr=newStr+"EEEE" + '\n' + "E"+ '\n' + "EEE"+ '\n' +"E"+ '\n' +"EEEE" + '\n' + "" + '\n' + "";else if(ch=='f')newStr=newStr+"FFFF" + '\n' + "F"+ '\n' + "FFF"+ '\n' +"F"+ '\n' +"F" + '\n' + "" + '\n' + "";else if(ch=='g')newStr=newStr+"_GGG" + '\n' + "G"+ '\n' + "G__GG"+ '\n' +"G___G"+ '\n' +"_GGG" + '\n' + "" + '\n' + "";else if(ch=='h')newStr=newStr+"H__H" + '\n' + "H__H"+ '\n' + "HHHH"+ '\n' +"H__H"+ '\n' +"H__H" + '\n' + "" + '\n' + "";else if(ch=='i')newStr=newStr+"III" + '\n' + "_I"+ '\n' + "_I"+ '\n' +"_I"+ '\n' +"III" + '\n' + "" + '\n' + "";else if(ch=='j')newStr=newStr+"____J" + '\n' + "____J"+ '\n' + "____J"+ '\n' +"J___J"+ '\n' +"_JJJ_" + '\n' + "" + '\n' + "";else if(ch=='k')newStr=newStr+"K__K" + '\n' + "K_K"+ '\n' + "KK"+ '\n' +"K_K"+ '\n' +"K__K" + '\n' + "" + '\n' + "";else if(ch=='l')newStr=newStr+"L" + '\n' + "L"+ '\n' + "L"+ '\n' +"L"+ '\n' +"LLLL" + '\n' + "" + '\n' + "";else if(ch=='m')newStr=newStr+"M___M" + '\n' + "MM_MM"+ '\n' + "M_M_M"+ '\n' +"M___M"+ '\n' +"M___M" + '\n' + "" + '\n' + "";else if(ch=='n')newStr=newStr+"N___N" + '\n' + "NN__N"+ '\n' + "N_N_N"+ '\n' +"N__NN"+ '\n' +"N___N" + '\n' + "" + '\n' + "";else if(ch=='o')newStr=newStr+"_OOO" + '\n' + "O___O"+ '\n' + "O___O"+ '\n' +"O___O"+ '\n' +"_OOO" + '\n' + "" + '\n' + "";else if(ch=='p')newStr=newStr+"PPPP" + '\n' + "P___P"+ '\n' + "PPPP"+ '\n' +"P"+ '\n' +"P" + '\n' + "" + '\n' + "";else if(ch=='q')newStr=newStr+"_QQQ_" + '\n' + "Q___Q"+ '\n' + "Q___Q"+ '\n' +"Q__QQ"+ '\n' +"_QQQQ" + '\n' + "_____Q" + '\n' + "";else if(ch=='r')newStr=newStr+"RRRR" + '\n' + "R___R"+ '\n' + "RRRR"+ '\n' +"R_R"+ '\n' +"R__RR" + '\n' + "" + '\n' + "";else if(ch=='s')newStr=newStr+"_SSS" + '\n' + "S"+ '\n' + "_SSS"+ '\n' +"____S"+ '\n' +"SSSS" + '\n' + "" + '\n' + "";else if(ch=='t')newStr=newStr+"TTTTTT" + '\n' + "__TT"+ '\n' + "__TT"+ '\n' +"__TT"+ '\n' +"__TT" + '\n' + "" + '\n' + "";else if(ch=='u')newStr=newStr+"U___U" + '\n' + "U___U"+ '\n' + "U___U"+ '\n' +"U___U"+ '\n' +"_UUU" + '\n' + "" + '\n' + "";else if(ch=='v')newStr=newStr+"V_____V" + '\n' + "V_____V"+ '\n' + "_V___V"+ '\n' +"__V_V"+ '\n' +"___V" + '\n' + "" + '\n' + "";else if(ch=='w')newStr=newStr+"W_____W" + '\n' + "W_____W"+ '\n' + "W__W__W"+ '\n' +"_W_W_W"+ '\n' +"__W_W" + '\n' + "" + '\n' + "";else if(ch=='x')newStr=newStr+"X___X" + '\n' + "_X_X"+ '\n' + "__X"+ '\n' +"_X_X"+ '\n' +"X___X" + '\n' + "" + '\n' + "";else if(ch=='y')newStr=newStr+"Y___Y" + '\n' + "_Y_Y"+ '\n' + "__Y"+ '\n' +"__Y"+ '\n' +"__Y" + '\n' + "" + '\n' + "";else if(ch=='z')newStr=newStr+"ZZZZZ" + '\n' + "____Z"+ '\n' + "___Z"+ '\n' +"__Z"+ '\n' +"ZZZZZ" + '\n' + "" + '\n' + "";else if(ch==' ')newStr=newStr+"" + '\n' + ""+ '\n' + ""+ '\n' +"";elsenewStr=newStr+ch;}document.verticaltext.txtresult.value=""+newStr+'\n'+"[:)]";}
+
+
+
+
+
+
+
+function createHeart(sourceId, resultId) {
+
+
+
+    objSource = window.document.getElementById(sourceId);
+
+
+
+    objResult = window.document.getElementById(resultId);
+
+
+
+ 
+
+
+
+    if(objSource.value.length == 0) {
+
+
+
+        alert("Please Type Your name in the Text Box!");
+
+
+
+        return false;
+
+
+
+    }
+
+
+
+ 
+
+
+
+    string = objSource.value;
+
+
+
+ 
+
+
+
+    heart = "";
+
+
+
+    heart += "_________"               + partString(string, 8)  + "____________" + partString(string, 9)  + "\n";
+
+
+
+    heart += "______"                  + partString(string, 14) + "_______"      + partString(string, 16) + "\n";
+
+
+
+    heart += "____"                    + partString(string, 19) + "___"          + partString(string, 19) + "\n";
+
+
+
+    heart += "___"                     + partString(string, 32) + "_______"      + partString(string, 4)  + "\n";
+
+
+
+    heart += "__"                      + partString(string, 32) + "_________"    + partString(string, 4)  + "\n";
+
+
+
+    heart += "_"                       + partString(string, 36) + "_______"      + partString(string, 4)  + "\n";
+
+
+
+    heart += "_"                       + partString(string, 40) + "______"       + partString(string, 1)  + "\n";
+
+
+
+    heart +=                             partString(string, 44) + "__"           + partString(string, 3)  + "\n";
+
+
+
+    heart +=                             partString(string, 47) + "_"            + partString(string, 1)  + "\n";
+
+
+
+    heart +=                             partString(string, 49)                                           + "\n";
+
+
+
+    heart +=                             partString(string, 49)                                           + "\n";
+
+
+
+    heart += "_"                       + partString(string, 47)                                           + "\n";
+
+
+
+    heart += "__"                      + partString(string, 45)                                           + "\n";
+
+
+
+    heart += "____"                    + partString(string, 42)                                           + "\n";
+
+
+
+    heart += "______"                  + partString(string, 37)                                           + "\n";
+
+
+
+    heart += "_________"               + partString(string, 31)                                           + "\n";
+
+
+
+    heart += "____________"            + partString(string, 25)                                           + "\n";
+
+
+
+    heart += "______________"          + partString(string, 20)                                           + "\n";
+
+
+
+    heart += "_________________"       + partString(string, 13)                                           + "\n";
+
+
+
+    heart += "___________________"     + partString(string, 9)                                            + "\n";
+
+
+
+    heart += "_____________________"   + partString(string, 6)                                            + "\n";
+
+
+
+    heart += "______________________"  + partString(string, 4)                                            + "\n";
+
+
+
+    heart += "_______________________" + partString(string, 2)                                            + "\n";
+
+
+
+    heart += "";
+
+
+
+ heart += "\n \n by justnaira.com";
+
+
+
+ 
+
+
+
+    objResult.value = heart;
+
+
+
+}
+
+
+
+function partString(string, num) {
+
+
+
+    if(string.length >= num)
+
+
+
+        return string.substring(0, num);
+
+
+
+ 
+
+
+
+    repeat = Math.ceil(num / string.length);
+
+
+
+ 
+
+
+
+    newString = "";
+
+
+
+ 
+
+
+
+    for(i = 0; i < repeat; i++)
+
+
+
+        newString += string;
+
+
+
+ 
+
+
+
+    return newString.substring(0, num);
+
+
+
+}
+
+
+
+
+
+
+
+function bookmark(){
+
+
+
+if ((navigator.appName == "Microsoft Internet Explorer") 
+
+
+
+&& (parseInt(navigator.appVersion) >= 4)) 
+
+
+
+{
+
+
+
+document.write('<a HREF="javascript:window.external.AddFavorite(window.location, document.title);"');
+
+
+
+document.write('<small>Bookmark this page!</small><br></a>');}
+
+
+
+else {
+
+
+
+var msg = "Bookmark this page!";
+
+
+
+if(navigator.appName == "Netscape") msg += "   - press(Ctrl-D) on your keyboard.";
+
+
+
+alert(msg);
+
+
+
+}
+
+
+
+}
+
+
+
+function addFav(caption,url)
+
+
+
+{
+
+
+
+if (window.sidebar)
+
+
+
+{
+
+
+
+window.sidebar.addPanel(caption, url,"");
+
+
+
+}
+
+
+
+else if (document.all)
+
+
+
+{
+
+
+
+window.external.AddFavorite(url, caption);
+
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+//  -->
+</script> 
+
+
+
+
+<script language="javascript">
+document.write( unescape( '%3C%74%61%62%6C%65%20%62%6F%72%64%65%72%3D%22%30%22%20%63%65%6C%6C%70%61%64%64%69%6E%67%3D%22%30%22%20%63%65%6C%6C%73%70%61%63%69%6E%67%3D%22%31%30%22%3E%20%0A%0A%0A%0A%20%20%20%20%3C%74%62%6F%64%79%3E%0A%3C%74%72%3E%20%0A%0A%0A%0A%20%20%20%20%20%3C%74%64%20%61%6C%69%67%6E%3D%22%63%65%6E%74%65%72%22%3E%26%6E%62%73%70%3B%0A%0A%0A%0A%20%20%20%20%20%20%3C%69%6E%70%75%74%20%69%64%3D%22%74%65%78%74%22%20%6E%61%6D%65%3D%22%74%65%78%74%22%20%73%69%7A%65%3D%22%32%30%22%3E%20%20%0A%0A%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%69%6E%70%75%74%20%61%63%63%65%73%73%6B%65%79%3D%22%67%22%20%63%6C%61%73%73%3D%22%62%75%74%74%6F%6E%22%20%6F%6E%63%6C%69%63%6B%3D%22%72%65%74%75%72%6E%20%63%72%65%61%74%65%48%65%61%72%74%28%27%74%65%78%74%27%2C%20%27%72%65%73%75%6C%74%27%29%3B%22%20%76%61%6C%75%65%3D%22%43%72%65%61%74%65%20%48%65%61%72%74%22%20%74%79%70%65%3D%22%62%75%74%74%6F%6E%22%3E%20%0A%0A%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%62%72%3E%0A%3C%62%72%3E%3C%2F%74%64%3E%0A%0A%0A%0A%20%20%20%20%3C%2F%74%72%3E%0A%0A%3C%74%72%3E%20%0A%0A%0A%0A%20%20%20%20%20%3C%74%64%20%61%6C%69%67%6E%3D%22%63%65%6E%74%65%72%22%3E%3C%74%65%78%74%61%72%65%61%20%63%6F%6C%73%3D%22%35%30%22%20%69%64%3D%22%72%65%73%75%6C%74%22%20%6F%6E%63%6C%69%63%6B%3D%22%74%68%69%73%2E%66%6F%63%75%73%28%29%3B%20%74%68%69%73%2E%73%65%6C%65%63%74%28%29%3B%22%20%72%65%61%64%6F%6E%6C%79%3D%22%72%65%61%64%6F%6E%6C%79%22%20%72%6F%77%73%3D%22%31%33%22%3E%43%72%65%61%74%20%41%73%63%69%69%20%48%65%61%72%74%20%62%79%20%4F%6C%75%73%65%67%75%6E%20%46%61%70%6F%68%75%6E%64%61%20%6F%66%20%6A%75%73%74%6E%61%69%72%61%2E%63%6F%6D%20%3C%2F%74%65%78%74%61%72%65%61%3E%20%0A%0A%0A%0A%20%20%20%20%20%3C%2F%74%64%3E%0A%0A%0A%0A%20%20%20%20%3C%2F%74%72%3E%0A%3C%2F%74%62%6F%64%79%3E%3C%2F%74%61%62%6C%65%3E' ) );
+</script>  
+
+Copyright &#169; by Olusegun Fapohunda - <a href="/web/20140519040518/http://www.justnaira.com/">Just Naira </a>
+
