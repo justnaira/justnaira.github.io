@@ -1,0 +1,31 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Character Count Tool</title>
+<link href="https://olusegun-fapohunda-calculator.googlecode.com/svn/justnaira/char-count.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+function charcount(){var count=document.getElementById('txt').value.length;document.getElementById('countdisp').innerHTML=count}function instantcount(a){document.getElementById('countdisp').innerHTML=a.value.length}function instantcountcheck(){var countbutton=document.getElementById('countgen');var countcheck=document.getElementById('instantcount');var txt=document.getElementById('txt');if(countcheck.checked==true){countbutton.disabled=true;txt.setAttribute('onkeyup','instantcount(this);')}else{countbutton.disabled=false;txt.removeAttribute('onkeyup')}}</script>
+
+</head>
+
+<body>
+<fieldset class="justnairafield"><legend class="justnairafieldtitle">Char Count Tool</legend><table width="100%"><tr><td width="40%" colspan="2">
+<textarea cols="40" rows="12" class="justnairatxt" id="txt"></textarea>
+
+</td><td>
+<input type="checkbox" id="instantcount" onclick="instantcountcheck();" /><label for="instantcount">Instant Count</label>
+</td></tr><tr><td height="31" align="right">
+Number of Characters:
+</td>
+  <td align="right"><label id="countdisp">0</label></td>
+</tr>
+<tr><td colspan="2" align="center">
+<button class="justnairabtn" id="countgen" onclick="charcount();">Count Characters</button>
+</td></tr></table>
+</fieldset>
+<br />
+<center>
+
+Copyright &copy; 2012 by Olusegun Fapohunda of <a rel="dofollow" href="http://www.justnaira.com">JustNaira Blog</a>. All Rights Reserved
+</center>
+</body>
+</html>

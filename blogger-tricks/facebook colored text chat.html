@@ -1,0 +1,100 @@
+<div dir="ltr" style="text-align: left;" trbidi="on">
+<script type='text/javascript'src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js?ver=1.7.1'>
+</script> 
+</script><b>Use This Colored Text Generator to Generate Colored Text For Facebook Chat.</b><br>
+<a name="more"></a><br>
+<div class="from">
+<label>Enter Your Text Here:</label><br>
+<textarea>Just Naira</textarea></div>
+<div class="to">
+<label>Use This On Facebook Chat:</label><br>
+
+<textarea></textarea></div>
+<div class="preview">
+<label>Preview:</label><br>
+<div>
+</div>
+</div>
+<div class="separator" style="clear: both; text-align: center;">
+</div>
+<div class="separator" style="clear: both; text-align: center;">
+</div>
+<div class="separator" style="clear: both; text-align: center;">
+</div>
+<div class="separator" style="clear: both; text-align: center;">
+</div>
+<div class="separator" style="clear: both; text-align: center;">
+
+</div>
+<br>
+<u>Example:</u><br>
+<br>
+<table class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;" align="center" cellpadding="0" cellspacing="0"><tbody>
+<tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-qqE0shhNTjs/T-hWmsRUyxI/AAAAAAAACfo/ez_iMIhsMWw/s400/Facebook-colored-text.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img src="http://1.bp.blogspot.com/-qqE0shhNTjs/T-hWmsRUyxI/AAAAAAAACfo/ez_iMIhsMWw/s400/Facebook-colored-text.jpg" border="0"></a></td></tr>
+<tr><td class="tr-caption" style="text-align: center;"><br></td></tr>
+</tbody></table>
+
+
+<style>
+textarea, .preview div { margin: 0; width: 100%; padding: 10px; background: #eee; border: solid 1px #064B8C; border-radius: 4px; height: 100px; color: #333; text-shadow: 1px 1px 0 #fff; }
+.from textarea { background: #fafafa; }
+textarea:focus { outline: 0; border: solid 1px #aaa; }
+div { margin: 10px; }
+textarea, label { font-size: 10pt; font-family: sans-serif; }
+label { padding: 5px 0; display: block; }
+body { color: #064B8C; background: #F0F6FB;border:1px solid #064B8C; }
+.preview img { width: 16px; height: 16px; background: #fff; display: inline-block; }
+</style><br>
+<br>
+<script>
+var Letters = {
+  A: '[[399197913893]]',
+  B: '[[115345298505025]]',
+  C: '[[53872404042]]',
+  D: '[[226910642728]]',
+  E: '[[140775945956538]]',
+  F: '[[136046106447549]]',
+  G: '[[119431374760220]]',
+  H: '[[205082339544090]]',
+  I: '[[432883640525]]',
+  J: '[[228315337208110]]',
+  K: '[[56926372437]]',
+  L: '[[221310038416]]',
+  M: '[[161672657237726]]',
+  N: '[[203933512990765]]',
+  O: '[[116564658357124]]',
+  P: '[[64245738440]]',
+  Q: '[[196390043757013]]',
+  R: '[[111884958838844]]',
+  S: '[[136198113087158]]',
+  T: '[[334073456605673]]',
+  U: '[[172843133886]]',
+  V: '[[77189649729]]',
+  W: '[[116928513730]]',
+  X: '[[108075899233912]]',
+  Y: '[[140715832616884]]',
+  Z: '[[165724910215]]'
+};
+
+$(".from textarea").live("keyup", function update() {
+  var str = $(this).val().toUpperCase();
+  str = str.replace(/[A-Z]/g, function(letter) {
+    return Letters[letter] + ' ';
+  });
+  
+  var str2 = str.replace(/\[\[(.*?)\]\]/g, function(_, id) {
+    return "<img src='https://graph.facebook.com/"+id+"/picture' />";
+  });
+
+  $(".to textarea").val(str);
+  $(".preview div").html(str2);
+});
+
+$(function() {
+  $(".from textarea").trigger('keyup');
+});
+</script>
+
+<div style="font-size:12px;text-align:center;"><b> Copyright © 2012 By Olusegun Fapohunda @ <a href="http://www.justnaira.com">Just Naira</a></b></div></div>
+
+</div>

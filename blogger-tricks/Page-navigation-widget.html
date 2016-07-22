@@ -1,0 +1,193 @@
+<html><head><title>Customize Page Navi</title>
+
+
+
+<style type="text/css">
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #efefef;
+}
+
+#outer-wrapper {
+  font-family: Verdana, Arial;
+}
+
+#header-wrapper {
+  margin: 0;
+  padding: 0;
+  background-color: #528bc5;
+}
+
+#header {
+  width: 96%;
+  margin: 0 auto;
+  background-color: #336699;
+  color: #ffffff;
+}
+
+#header h1 {
+  padding-top: 18px;
+  padding-bottom: 0px;
+  text-align: left;
+  margin: 0 14px .1em;
+  line-height: 1.2em;
+}
+
+#header .description {
+  margin: 0 14px;
+  padding: 0 0 10px;
+  line-height: 1.4em;
+  text-align: left;
+  font-size: 90%;
+}
+
+#content-wrapper {
+  width: 96%;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-top: 0;
+}
+
+#content-wrapper h2 {
+ margin: 1.6em 0 .5em;
+ padding: 4px 5px;
+ background-color: #ffd595;
+ font-size: 100%;
+ color: #333333;
+}
+
+#content-wrapper .instructions {
+  font-size: 90%;
+  text-align: left;
+}
+
+#footer {
+  padding-top: 10px;
+  text-color: #333333;
+  font-size: 80%;}
+
+</style>
+
+<script language="javascript">
+var options = "";
+function customize() {
+  // Get input values
+var pageCount = document.getElementsByName("pageCount")[0].value;
+var displayPageNum = document.getElementsByName("displayPageNum")[0].value;
+var upPageWord = document.getElementsByName("iprevious")[0].value;
+var downPageWord = document.getElementsByName("inext")[0].value;
+var txtarea = document.getElementsByTagName("textarea")[0];
+
+
+txtarea.value = "\<style type='text/css'\>";
+txtarea.value = txtarea.value +".showpageArea a {";
+txtarea.value = txtarea.value + "text-decoration:underline;}";
+txtarea.value = txtarea.value + ".showpageNum a {";
+txtarea.value = txtarea.value + "text-decoration:none;";
+txtarea.value = txtarea.value + "border: 1px solid #cccccc;";
+txtarea.value = txtarea.value + "margin:0 3px;";
+txtarea.value = txtarea.value + "padding:3px;}";
+txtarea.value = txtarea.value + ".showpageNum a:hover {";
+txtarea.value = txtarea.value + "border: 1px solid #cccccc;";
+txtarea.value = txtarea.value + "background-color:#cccccc;}";
+txtarea.value = txtarea.value + ".showpagePoint {";
+txtarea.value = txtarea.value + "color:#333;";
+txtarea.value = txtarea.value + "text-decoration:none;";
+txtarea.value = txtarea.value + "border: 1px solid #cccccc;";
+txtarea.value = txtarea.value + "background: #cccccc;";
+txtarea.value = txtarea.value + "margin:0 3px;";
+txtarea.value = txtarea.value + "padding:3px;}";
+txtarea.value = txtarea.value + ".showpageOf {";
+txtarea.value = txtarea.value + "text-decoration:none;";
+txtarea.value = txtarea.value + "padding:3px;";
+txtarea.value = txtarea.value + "margin: 0 3px 0 0;}";
+txtarea.value = txtarea.value + ".showpage a {";
+txtarea.value = txtarea.value + "text-decoration:none;";
+txtarea.value = txtarea.value + "border: 1px solid #cccccc;";
+txtarea.value = txtarea.value + "padding:3px;";
+txtarea.value = txtarea.value + "}";
+txtarea.value = txtarea.value + ".showpage a:hover {";
+txtarea.value = txtarea.value + "text-decoration:none;";
+txtarea.value = txtarea.value + "}";
+txtarea.value = txtarea.value + ".showpageNum a:link,.showpage a:link {";
+txtarea.value = txtarea.value + "text-decoration:none;";
+txtarea.value = txtarea.value + "color:#333333;";
+txtarea.value = txtarea.value + "}";
+txtarea.value = txtarea.value +"\</style\>";
+
+
+txtarea.value = txtarea.value + "\<script style='text/javascript'\>";
+txtarea.value = txtarea.value + "var pageCount=" +pageCount+ ";";
+txtarea.value = txtarea.value +"var displayPageNum=" + displayPageNum + ";";
+txtarea.value = txtarea.value +"var upPageWord=\"" + upPageWord + "\";";
+txtarea.value = txtarea.value +"var downPageWord=\"" + downPageWord + "\";";
+txtarea.value = txtarea.value +"\</script\>";
+
+
+txtarea.value = txtarea.value + "\<script style='text/javascript' src='http://olusegun-fapohunda-calculator.googlecode.com/svn/blogger_pagenavi_min.js'\>\</script\>";
+
+
+
+
+
+
+
+
+
+
+
+  // Show add button
+        var addbutton = document.getElementsByName("go")[0];
+        addbutton.disabled = false;
+}
+
+
+function defaultvalues() {
+document.getElementsByName("pageCount")[0].value = "5";
+document.getElementsByName("displayPageNum")[0].value = "5";
+document.getElementsByName("iprevious")[0].value = "Previous";
+document.getElementsByName("inext")[0].value = "Next";
+document.getElementsByName("go")[0].disabled = true;
+
+}	
+
+</script></head><body>
+      <div id="content-wrapper">
+       <h2>Page navi widget creator</h2>
+<form method="post" action="http://www.blogger.com/add-widget" target="_blank">
+<fieldset style="padding: 5px 10px; width: 430px;"><legend align="top">Instructions</legend>
+
+<div style="text-align: left; font-size: 85%;">Change settings<br>Click 'Customize' button<br>Click 'Add Widget To My Blog' button<br></div></fieldset><br>
+
+
+<fieldset style="padding: 5px 10px; width: 430px;"><legend align="top">Customize Widget</legend><div style="text-align: left; font-size: 85%;">
+<span style="width: 160px;">Previous Page Text</span>: <input size="25" name="iprevious" value="Previous" type="text"><br>
+<span style="width: 160px;">Next Page Text</span>: <input size="25" name="inext" value="Next" type="text"><br>
+
+<span style="width: 160px;">Posts Per Page</span>: <input size="3" name="pageCount" value="5" type="text"><br>
+
+<span style="width: 160px;">Max Number of Page navs before and after current page</span>: <input size="3" name="displayPageNum" value="5" type="text"><br>
+
+
+</fieldset><br>
+<input value="Customize" onclick="javascript:customize();" type="button">
+
+<input value="Reset" onclick="javascript:defaultvalues();" type="button">
+<input disabled="disabled" name="go" value="Add Widget To My Blog" type="submit">
+<br><br>
+<textarea name="widget.content" style="display: none;"></textarea>
+</form>
+    </div>
+
+  <div id="footer">
+    &#169; 2012 by Fapohunda Olusegun of <a href="http://www.justnaira.com">Just Naira</a>    
+  </div>
+
+  </div>
+</body></html>

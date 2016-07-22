@@ -1,0 +1,214 @@
+<html><head><title>Customize Recent Posts Widget</title>
+
+
+
+<style type="text/css">
+            body { font-family: Verdana, Arial;margin: 0;padding: 0;text-align: left;font-size:small; color:#064B8C;}
+            #content-wrapper { width: 95%;  margin: 0 auto;  padding: 1%;  text-align: left; 
+            background:#F0F6FB;
+border:5px solid #064B8C;
+-webkit-border-radius: 20px;-moz-border-radius: 20px;border-radius: 20px;
+            }
+            #content-wrapper h2 {font-size:20px;margin: 5px 0 1em ;padding: 3px 10px;background-color: #F0F6FB;font-size:16px;color:#064B8C;border:1px solid #064B8C;text-align:center;-moz-border-radius: 6px;-webkit-border-radius: 6px;border-radius: 6px;
+            -webkit-border-radius: 20px;-moz-border-radius: 20px;border-radius: 20px;
+            }
+            fieldset{-moz-border-radius: 8px;-webkit-border-radius: 8px;border-radius: 8px;border:1px solid #064B8C;}
+            fieldset legend{font-size:15px;font-weight:bold; padding:2px 10px;border:1px solid #064B8C;-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius: 4px;}
+        </style>
+
+<script language="javascript">
+var options = "";
+function submitter() {
+  // Get input values
+	var blogurl = document.getElementsByName("iblogurl")[0].value;
+	var blogurl = document.getElementsByName("iblogurl")[0].value;
+	var feedtype;
+	if(document.getElementsByName("ifullfeed")[0].checked) feedtype="default"; else feedtype="summary";
+if(blogurl.substring(0,7)=="http://")blogurl=blogurl.substring(7,blogurl.length);
+if(blogurl[blogurl.length-1]=="/")blogurl=blogurl.substring(0,blogurl.length-1);
+
+	var numposts = document.getElementsByName("inumposts")[0].value;
+        var showdate = document.getElementsByName("ishowdate")[0].checked;
+        var showsummary = document.getElementsByName("ishowsummary")[0].checked;
+        var numchars = document.getElementsByName("inumchars")[0].value;
+        var sortbypublished = document.getElementsByName("sort")[0].checked;
+  // Generate widgetcode
+        var txtarea = document.getElementsByTagName("textarea")[0];
+        txtarea.value = "\<div id='bp_recent'\>\</div\>\<div class='bp_footer'\>\<small\>\<a id='bp_recent_link' target='_blank' href='http://www.justnaira.com/2012/01/recent-post-widget-for-blogger.html/' style='padding: 1px 0px 0px 19px;text-decoration:none;'\>\<img src='http://safir85.ucoz.com/bdlab-blogspot/24work/recent-posts/blogger-widgets-recent-posts.png' alt='Recent Posts with Thumbnails for Blogger' style='border:none' /\>\</a\>Powered By \<a href='http://www.justnaira.com/' target='_blank' title='blogger widgets'\>Blogger Widgets\</a\>\</small\>\</div\>\n";
+
+        txtarea.value = txtarea.value + "\<script style='text/javascript' src='http://olusegun-fapohunda-calculator.googlecode.com/svn/recentpost.js'\>\</script\>\n\<script style='text/javascript'\>\n";
+        txtarea.value = txtarea.value + "var numberOfPosts = " + numposts + ";\n";
+                if (showdate) { txtarea.value = txtarea.value + "var showPostDate = true;\n"; }
+            else { txtarea.value = txtarea.value + "var showPostDate = false;\n"; };
+        if (showsummary) {
+         		txtarea.value = txtarea.value + "var showSummary = true;\n";
+                txtarea.value = txtarea.value + "var summaryLength = " + numchars + ";\n";
+					}
+            else { txtarea.value = txtarea.value + "var showSummary = false;\n"; };
+        txtarea.value = txtarea.value + "var titleLength = " + document.getElementsByName("ititlechars")[0].value + ";\n";
+
+txtarea.value = txtarea.value + "var showCommentCount = "+document.getElementsByName("ishowcomment")[0].checked+";\n";
+
+
+txtarea.value = txtarea.value + "var showThumbs = "+document.getElementsByName("ishowthumbnail")[0].checked+";\n";
+if(document.getElementsByName("ishowthumbnail")[0].checked)
+{
+txtarea.value = txtarea.value + "var showNoImage = "+document.getElementsByName("idefault")[0].checked+";\n";
+txtarea.value = txtarea.value + "var imgDim = "+document.getElementsByName("iimgdim")[0].value+";\n";
+txtarea.value = txtarea.value + "var imgFloat = '"+document.getElementsByName("ifloat")[0].value+"';\n";
+txtarea.value = txtarea.value + "var myMargin = "+document.getElementsByName("imargin")[0].value+";\n";
+if(feedtype="summary") mediaThumbsOnly=true; else mediaThumbsOnly=fale;
+txtarea.value = txtarea.value + "var mediaThumbsOnly = "+mediaThumbsOnly+";\n";
+}
+txtarea.value = txtarea.value + "var showReadMore = "+document.getElementsByName("ishowreadmore")[0].checked+";\n";
+if(document.getElementsByName("ishowreadmore")[0].checked)
+txtarea.value = txtarea.value + "var readMore = '"+document.getElementsByName("ireadmore")[0].value+"';\n";
+
+
+
+		blogurl="http://" + blogurl + "/feeds/posts/";
+		if(blogurl=="http:///feeds/posts/") blogurl="/feeds/posts/";
+        txtarea.value = txtarea.value + "\</script\>\n";
+        txtarea.value = txtarea.value + "\<script src='" + blogurl + feedtype+"?max-results="+numposts+"&orderby=";
+        if (sortbypublished) { txtarea.value = txtarea.value + "published"; }
+            else { txtarea.value = txtarea.value + "updated"; }
+        txtarea.value = txtarea.value + "&alt=json-in-script&callback=bprecentpostswiththumbnails'\>\</script\>\n";
+  // Show add button
+
+var integer=/^-?\d+$/;
+if (integer.test(document.getElementsByName("ititlechars")[0].value)&& integer.test(numposts))
+{
+if((document.getElementsByName("ishowthumbnail")[0].checked &&!integer.test(document.getElementsByName("iimgdim")[0].value))||(showsummary &&!integer.test(numchars)))
+alert("Error! Some Numeric Fields have incorrect values. Correct it.");
+else document.forms["myform"].submit();
+}
+else alert("Error! Some Numeric Fields have incorrect values. Correct it.");
+
+
+
+
+}
+
+function defaultvalues() {
+	document.getElementsByName("widget.title")[0].value = "Recent Posts";
+        document.getElementsByName("iblogurl")[0].value = "";
+	document.getElementsByName("inumposts")[0].value = "5";
+        document.getElementsByName("ishowdate")[0].checked = true;
+        document.getElementsByName("ishowthumbnail")[0].checked = true;
+        document.getElementsByName("ishowcomment")[0].checked = true;
+        document.getElementsByName("ishowreadmore")[0].checked = true;
+        document.getElementsByName("ishowsummary")[0].checked = true;
+        document.getElementsByName("ifullfeed")[0].checked = false;
+        document.getElementsByName("inumchars")[0].value = "200";
+        document.getElementsByName("idefault")[0].checked = false;
+        document.getElementsByName("iimgdim")[0].value = "100";
+        document.getElementsByName("ifloat")[0].value = "left";
+        document.getElementsByName("imargin")[0].value = "5";
+        document.getElementsByName("ititlechars")[0].value = "100";
+        document.getElementsByName("ireadmore")[0].value = "More";
+        document.getElementsByName("sort")[0].checked = true;
+        document.getElementsByName("sort")[1].checked = false;
+
+}
+
+function gridvalues() {
+
+
+
+        document.getElementsByName("ishowdate")[0].checked = false;
+        document.getElementsByName("ishowthumbnail")[0].checked = true;
+        document.getElementsByName("ishowcomment")[0].checked = false;
+        document.getElementsByName("ishowreadmore")[0].checked = false;
+        document.getElementsByName("ishowsummary")[0].checked = false;
+        document.getElementsByName("idefault")[0].checked = true;
+        document.getElementsByName("iimgdim")[0].value = "70";
+        document.getElementsByName("ifloat")[0].value = "left";
+        document.getElementsByName("imargin")[0].value = "5";
+        document.getElementsByName("ititlechars")[0].value = "0";
+
+}
+
+</script></head><body>
+
+
+    <div id="content-wrapper">
+
+
+
+<form name="myform" method="post" action="http://www.blogger.com/add-widget" target="_blank">
+<fieldset style="padding: 5px 10px; width: 400px;"><legend align="top">Customize Recent Posts Widget</legend>
+
+<div style="text-align: left; font-size: 85%;">Change settings<br>For a Grid Layout, click the 'Grid Layout' Button, and it will adjust the settings automatically for you<br>Click 'Add Widget To My Blog' button<br></div></fieldset><br>
+
+<fieldset style="padding: 5px 10px; width: 400px;"><legend align="top">Widget Title</legend>
+<div style="text-align: left; font-size: 85%;"><span style="width: 130px;">Widget Title</span>: <input size="30" name="widget.title" value="Recent Posts" type="text"><br></div>
+</fieldset><br>
+<fieldset style="padding: 5px 10px; width: 400px;"><legend align="top">Customize Widget</legend><div style="text-align: left; font-size: 85%;">
+
+<span style="width: 130px;">Blog url</span>: http://<input size="25" name="iblogurl" value="" type="text">/<br>
+
+(You can leave this blank if you are displaying the posts from the same blog to which you are adding the widget)
+<table>
+<tr>
+<td><span style="width: 130px;">Number of posts</span></td><td>: <input size="3" name="inumposts" value="5" type="text"></td></tr>
+<td><span style="width: 130px;">Maximum title Length</span></td><td>: <input size="3" name="ititlechars" value="100" type="text"> characters</td></tr>
+
+<td><span style="width: 130px;">Show Thumbnail</span></td><td>:<input name="ishowthumbnail" checked="checked" type="checkbox"></td></tr>
+
+
+<td><span style="width: 130px;">Show Default Thumbnail</span></td><td>:<input name="idefault"  type="checkbox">(If image is not present)</td></tr>
+
+<td><span style="width: 130px;">Thumbnail Dimension</span></td><td>: <input size="3" name="iimgdim" value="100" type="text"> px</td></tr>
+
+<td><span style="width: 130px;">Float Thumbnail to</span></td><td>: <select name="ifloat">
+
+  <option value="left">Left</option>
+
+  <option value="right">Right</option>
+  <option value="none">None</option>
+
+</select>
+</td></tr>
+<td><span style="width: 130px;">Thumbnail Margin</span></td><td>: <select name="imargin">
+  <option value="5">5px Margin</option>
+
+  <option value="0">No Margin</option>
+
+</select>
+</td></tr>
+<td><span style="width: 130px;">Show summary</span></td><td>:<input name="ishowsummary" checked="checked" type="checkbox"></td></tr>
+<td><span style="width: 130px;">Summary size</span></td><td>: <input size="3" name="inumchars" value="200" type="text"> characters</td></tr>
+
+<td><span style="width: 130px;">Show post date</span></td><td>:<input name="ishowdate" checked="checked" type="checkbox"></td></tr>
+
+<td><span style="width: 130px;">Show Comment Number</span></td><td>:<input name="ishowcomment" checked="checked" type="checkbox"></td></tr>
+
+<td><span style="width: 130px;">Show Read more Link</span></td><td>:<input name="ishowreadmore" checked="checked" type="checkbox"></td></tr>
+<td><span style="width: 130px;">Read More Text</span></td><td>:  <input size="10" name="ireadmore" value="More" type="text"></td></tr>
+<td><span style="width: 130px;">Use Full Feed</span></td><td>:<input name="ifullfeed"  type="checkbox"></td></tr>
+
+</table>
+
+<span style="width: 130px;">Sorting</span>: <input name="sort" value="published" checked type="radio">published    <input name="sort" value="updated" type="radio">updated<br></div>
+
+</fieldset><br>
+<input value="Reset" onclick="javascript:defaultvalues();" type="button">
+<input value="Grid Layout" onclick="javascript:gridvalues();" type="button">
+<input name="go" onclick="javascript:submitter();" value="Add Widget To My Blog" type="button">
+<input name="infoUrl" value="http://www.justnaira.com" type="hidden">
+
+<input name="logoUrl" value="http://4.bp.blogspot.com/-xOnoIoj3_cg/T9GwLdibaiI/AAAAAAAACNA/CUMPulzvUkg/s400/justnaira.jpg" type="hidden">
+
+
+<br><br>
+<textarea name="widget.content" style="display: none;"></textarea>
+</form>
+    </div>
+
+  <div id="footer">
+   Copyright &copy; 2012 by Olusegun Fapohunda @ <a rel="dofollow" href="http://www.justnaira.com">Just Naira</a>.All Rights Reserved</a>
+
+  </div>
+  </div>
+
+</body></html>

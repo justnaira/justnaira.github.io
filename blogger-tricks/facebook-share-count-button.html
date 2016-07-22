@@ -1,0 +1,156 @@
+<html>
+<head>
+<title>Facebook Share Count Button Code Generator for Blogger by Just Naira</title>
+<style type="text/css">
+.textarea-box, .textareaBox{	border:1px solid #064B8C;	padding:6px;	-webkit-resize: none;	-moz-resize: none;	resize: none;	-webkit-box-shadow: 1px 1px 1px #dfdfdf;	-moz-box-shadow: 1px 1px 1px #dfdfdf;	box-shadow: 1px 1px 1px #dfdfdf;		-webkit-border-radius: 4px;	-moz-border-radius: 4px;	border-radius: 4px;}.textareaBox{	display:block;	width:90%;	padding:10px;	max-width:98%;	margin:20px auto;	max-height:600px;	min-height:300px;}	body { font-family: Verdana, Arial;margin: 0;padding: 0;text-align: left;font-size:normal;}	#outer-wrapper {font-family: Verdana, Arial;}	#content-wrapper { width: 98%; max-widtd:980px;  margin: 0 auto;  padding: 5px;  text-align: left;    background:#F0F6FB;border:2px solid #064B8C;-webkit-border-radius: 20px;-moz-border-radius: 20px;border-radius: 20px;   }	#content-wrapper h2 {text-align:center;font-size:20px;margin: 5px 0 1em ;padding: 3px 10px;background-color: #064B8C;font-size:16px;color:#F0F6FB;border:1px solid #111;   -webkit-border-radius: 20px;-moz-border-radius: 20px;border-radius: 20px;   }	fieldset{margin:0px;padding:20px;}</style>
+
+<script type='text/javascript'>
+//<![CDATA[
+	function justnairacodegen(){var fctypecode="";for(i=0;i<document.getElementsByName("fctype").length;i++){if(document.getElementsByName("fctype")[i].checked==true){fctypecode=document.getElementsByName("fctype")[i].value}}var syntexcode=document.getElementsByTagName("textarea")[0];var postsxmltag=document.getElementsByName("inposts")[0].checked;var fcfloat=document.getElementsByName("float")[0].checked;syntexcode.value="";if(postsxmltag){syntexcode.value=syntexcode.value+"\<b:if cond='data:blog.pageType == \&quot;item\&quot;'\>"}if(fcfloat){syntexcode.value=syntexcode.value+"\<div style=\"float:left;margin:10px 10px 10px 0;\"\>"}else{syntexcode.value=syntexcode.value+"\<div style=\"float:right;margin:10px 0 10px 10px; \"\>"}if(fctypecode==1){syntexcode.value=syntexcode.value+"\<a name=\"fb_share\" type=\"box_count\" expr:share_url='data:post.url' href=\"http://www.facebook.com/sharer.php\"\>Share\</a\>\<script src=\"http://static.ak.fbcdn.net/connect.php/js/FB.Share\" type=\"text/javascript\"\>\</script\>"}if(fctypecode==2){syntexcode.value=syntexcode.value+"\<a name=\"fb_share\" type=\"button_count\" expr:share_url='data:post.url' href=\"http://www.facebook.com/sharer.php\"\>Share\</a\>\<script src=\"http://static.ak.fbcdn.net/connect.php/js/FB.Share\" type=\"text/javascript\"\>\</script\>"}if(fctypecode==3){syntexcode.value=syntexcode.value+"\<a name=\"fb_share\" type=\"button\" expr:share_url='data:post.url' href=\"http://www.facebook.com/sharer.php\"\>Share\</a\>\<script src=\"http://static.ak.fbcdn.net/connect.php/js/FB.Share\" type=\"text/javascript\"\>\</script\>"}if(fctypecode==4){syntexcode.value=syntexcode.value+"\<a name=\"fb_share\" type=\"icon\" expr:share_url='data:post.url' href=\"http://www.facebook.com/sharer.php\"\>Share\</a\>\<script src=\"http://static.ak.fbcdn.net/connect.php/js/FB.Share\" type=\"text/javascript\"\>\</script\>"}if(fctypecode==5){syntexcode.value=syntexcode.value+"\<script type=\"text/javascript\"\>var fbShare = {url: '\<data:post.url/\>', size: 'large' }\</script\>\<script src=\"http://widgets.fbshare.me/files/fbshare.js\" type=\"text/javascript\"\>\</script\>"};if(fctypecode==6){syntexcode.value=syntexcode.value+"\<script type=\"text/javascript\"\>var fbShare = {url: '\<data:post.url/\>', size: 'small' }\</script\>\<script src=\"http://widgets.fbshare.me/files/fbshare.js\" type=\"text/javascript\"\>\</script\>"};syntexcode.value=syntexcode.value+"\</div\>";if(postsxmltag){syntexcode.value=syntexcode.value+"\</b:if\>"}}//]]>
+</script>
+
+</head>
+<body>
+<div id='content-wrapper'>
+	<h2>
+		Facebook Share Count Button Code Generator for Blogger
+	</h2>
+
+	<fieldset>
+		<legend align='left'>
+			Select FB Share Count type
+		</legend>
+		<table width="100%">
+			<tr>
+				<td width='50%' align="right">
+					<input name='fctype' value='1' checked='true' type='radio'>
+					</label>
+
+				</td>
+				<td width='50%'>
+					<img border="0" src="http://lh3.googleusercontent.com/-uTZ175YwKao/TmHdWeQEUoI/AAAAAAAABLg/1u9iKT1fjCI/w2b_fb1.png"/>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					<input name='fctype' value='2' type='radio'>
+
+				</td>
+
+				<td>
+					<img border="0" src="http://lh5.googleusercontent.com/-amxW1BAbKbM/TmHdWXxGUeI/AAAAAAAABLc/IxwFIr1MyJ0/w2b_fb2.png"/>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					<input name='fctype' value='3' type='radio'>
+
+				</td>
+				<td>
+
+					<img border="0" src="http://lh3.googleusercontent.com/-Ot7kRyfwQgE/TmHdWmoXIVI/AAAAAAAABLk/sQxoYl7kQTc/w2b_fb3.png"/>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					<input name='fctype' value='4' type='radio'>
+
+				</td>
+				<td>
+					<img border="0" src="http://lh6.googleusercontent.com/-8N_TcUjjJjM/TmHdWji2ifI/AAAAAAAABLo/hvg_uIpzIMk/w2b_fb4.png"/>
+
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					<input name='fctype' value='5' type='radio'>
+
+				</td>
+				<td>
+					<img border="0" src="http://lh4.googleusercontent.com/-0acVoCOMTLI/TmHdWxX7cNI/AAAAAAAABLs/4evhojdEvnI/w2b_fb5.png"/>
+				</td>
+
+			</tr>
+			<tr>
+				<td align="right">
+					<input name='fctype' value='6' type='radio'>
+
+				</td>
+				<td>
+					<img border="0" src="http://lh4.googleusercontent.com/-3LYmDQNtMJU/TmHdWDRGuuI/AAAAAAAABLY/1F70X6lkOjQ/w2b_fb6.png"/>
+				</td>
+			</tr>
+
+		</table>
+	</fieldset>
+	<br>
+
+	<fieldset>
+		<legend align='left'>
+			Settings
+		</legend>
+		<table width="100%">
+			<tr>
+
+				<td align="right">
+					<input type='radio' value='left' checked='true' name='float'>
+
+				</td>
+
+				<td>
+					Align
+					<b>
+						Left
+					</b>
+				</td>
+			</tr>
+
+			<tr>
+
+				<td align="right" width="50%">
+
+					<input type='radio' value='right' name='float'>
+				</td>
+				<td width="50%">
+					Align
+					<b>
+						Right
+					</b>
+				</td>
+
+			</tr>
+
+			<tr height="10px;" />
+			<tr>
+				<td align="right">
+						<input type='checkbox' value='postpage' name='inposts'>
+				</td>
+				<td>
+					Show FB Count in Post Pages Only
+				</td>
+
+			</tr>
+
+		</table>
+	</fieldset>
+	<br>
+	<center>
+		<input value='Get Code' style='font-size:16px;width:220px;line-height:25px;font-weight:bold;' type='button' onclick='javascript:justnairacodegen();' />
+	</center>
+	<br>
+
+	<textarea class="textarea-box" onfocus="this.select()" onmouseover="this.focus()" onclick="this.focus();this.select()" style='background:#ffffff;width:100%;height:100px;' readonly='readonly'	name='tbox'></textarea>
+
+	<br>
+	<br>
+	<center>
+		<small>
+			Copyright &copy; 2011 All Rights Reserved by  <a href='http://www.justnaira.com/'>Just Naira</a>
+
+		</small>
+
+	</center>
+
+</div>
+</body>
+</html>

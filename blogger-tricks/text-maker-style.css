@@ -1,0 +1,16 @@
+input {
+font-family:Arial;
+font-size:16px;
+font-weight:bold;
+color:#000000;
+width:500px;
+border:1px solid #000000;
+background-color:#ffffff;
+}
+
+.font {
+font-family: arial,sans-serif;
+font-size: 16px;
+color: #0E60A8;
+font-weight: bold;
+}

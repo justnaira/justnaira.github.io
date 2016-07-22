@@ -1,0 +1,125 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<title>Alexa Rank Widget Generator</title>
+
+<style type="text/css">
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #F0F6FB;
+}
+
+#outer-wrapper {
+  font-family: Verdana, Arial;
+}
+
+#header-wrapper {
+  margin: 0;
+  padding: 0;
+  background-color: #064B8C;
+}
+
+#header {
+  width: 96%;
+  margin: 0 auto;
+  background-color: #064B8C;
+  color: #F0F6FB;
+}
+
+#header h1 {
+  padding-top: 18px;
+  padding-bottom: 0px;
+  text-align: left;
+  margin: 0 14px .1em;
+  line-height: 1.2em;
+}
+
+#header .description {
+  margin: 0 14px;
+  padding: 0 0 10px;
+  line-height: 1.4em;
+  text-align: left;
+  font-size: 90%;
+}
+
+#content-wrapper {
+  width: 96%;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  background-color: #F0F6FB;
+  border: 1px solid #064B8C;
+  border-top: 0;
+}
+
+#content-wrapper h2 {
+ margin: 1.6em 0 .5em;
+ padding: 4px 5px;
+ background-color: #064B8C;
+ font-size: 100%;
+ color: #F0F6FB;
+}
+
+
+#footer {
+  padding-top: 10px;
+  text-color: #333333;
+  font-size: 80%;}
+
+</style>
+
+<script language="javascript">
+var options = "";
+function customize() {
+  // Get input values
+	var blogurl = document.getElementsByName("iblogurl")[0].value;
+	     
+  // Generate widgetcode
+        var txtarea = document.getElementsByTagName("textarea")[0];
+        txtarea.value = "\<A href=\"http://www.alexa.com/siteinfo/"+ blogurl +"/\"\>\<SCRIPT type=\'text/javascript\' language=\'JavaScript\' src=\'http://xslt.alexa.com/site_stats/js/s/a?url="+ blogurl +"\'\>\</SCRIPT\>\</A\>";
+         // Show add button
+        var addbutton = document.getElementsByName("go")[0];
+        addbutton.disabled = false;
+}
+
+function defaultvalues() {
+	document.getElementsByName("widget.title")[0].value = "Alexa Rank Widget";
+    document.getElementsByName("iblogurl")[0].value = "bloggerbelog.com";
+	document.getElementsByName("go")[0].disabled = false;
+}	
+
+</script>
+    <div id="content-wrapper">
+       <h2>Alexa Rank Button  (120 x 95) Widget Generator</h2>
+<form method="POST" action="http://www.blogger.com/add-widget" 
+target="_blank">
+
+
+
+<fieldset style="width: 400px; padding: 5px 10px;"><legend align="top">Customize
+ Widget</legend><div style="text-align: left; font-size: 85%;">
+   <p><span style="width: 130px;">Blog url</span>: http://
+       <input size="20" 
+name="iblogurl" value="www.justnaira.com" type="text">
+
+      /    
+   <p><em>example: www.justnaira.com </em><br/>
+        <br>
+   </div>
+</fieldset><br>
+<input value="Generate" onclick="javascript:customize();" type="button">
+<input value="Default" onclick="javascript:defaultvalues();" type="button">
+<input disabled="disabled" name="go" value="Add To Blogger" type="submit" align="left">
+<br><br>
+<textarea name="widget.content" style="display: none;"></textarea>
+</form>
+    </div>
+
+  <div id="footer">
+Copyright &#169; by Olusegun Fapohunda - <a href="http://www.justnaira.com/">Just Naira </a></div>
+  </div>
+</body></html>
+

@@ -1,0 +1,65 @@
+@charset "utf-8";
+.JNfield {
+    border: 1px solid #A8B5BF;
+    border-radius: 5px 5px 5px 5px;
+}
+.JNfieldtitle {
+    border: 1px dotted;
+    border-radius: 3px 3px 3px 3px;
+    padding: 2px 6px;
+}
+.JNtxt:focus {
+    box-shadow: 1px 1px 3px #ABABAB;
+}
+.JNfield>table {
+    line-height: 16px;
+}
+.JNbtn {
+    background: -moz-linear-gradient(center top , #F4F4F4 0%, #D8E1E7 100%) repeat scroll 0 0 transparent;
+	background-color:#F4F4F4;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f4f4f4), color-stop(100%,#d8e1e7));
+background: -webkit-linear-gradient(top, #f4f4f4 0%,#d8e1e7 100%);
+background: -o-linear-gradient(top, #f4f4f4 0%,#d8e1e7 100%);
+background: -ms-linear-gradient(top, #f4f4f4 0%,#d8e1e7 100%);
+background: linear-gradient(top, #f4f4f4 0%,#d8e1e7 100%);
+    border: 1px solid #A8B5BF;
+    border-radius: 3px 3px 3px 3px;
+    cursor: pointer;
+    padding: 4px 14px;
+}
+.JNtxt:hover {
+    border: 1px solid #156DBB;
+}
+.JNbtn:hover {
+    background: none repeat scroll 0 0 #D8E1E7;
+}
+.JNtxt {
+    border: 1px solid #7F9DB9;
+    border-radius: 3px 3px 3px 3px;
+	padding:4px 2px;
+}
+.JNtitle {
+	background-color:#1F5EA2;
+    background: -moz-linear-gradient(center top , #0090F7 0%, #1F5EA2 100%) repeat scroll 0 0 transparent;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0090f7), color-stop(100%,#1f5ea2));
+background: -webkit-linear-gradient(top, #0090f7 0%,#1f5ea2 100%);
+background: -o-linear-gradient(top, #0090f7 0%,#1f5ea2 100%);
+background: -ms-linear-gradient(top, #0090f7 0%,#1f5ea2 100%);
+background: linear-gradient(top, #0090f7 0%,#1f5ea2 100%);
+    border: 2px solid;
+    border-radius: 14px 14px 14px 14px;
+    color: #FFFFFF;
+    font: 21px arial,Sans MS;
+    padding: 4px;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000000;
+}body {
+background: -moz-linear-gradient(-45deg, #FFFFFF 0%, #FFFFFF 20%, #FFFFFF 32%, #95C2E5 100%) no-repeat fixed 0 0 #DCF0FF;
+	background-color:#dcf0ff;
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#ffffff), color-stop(20%,#ffffff), color-stop(32%,#ffffff), color-stop(100%,#95c2e5));
+background: -webkit-linear-gradient(-45deg, #ffffff 0%,#ffffff 20%,#ffffff 32%,#95c2e5 100%);
+background: -o-linear-gradient(-45deg, #ffffff 0%,#ffffff 20%,#ffffff 32%,#95c2e5 100%);
+background: -ms-linear-gradient(-45deg, #ffffff 0%,#ffffff 20%,#ffffff 32%,#95c2e5 100%);
+background: linear-gradient(-45deg, #ffffff 0%,#ffffff 20%,#ffffff 32%,#95c2e5 100%);
+font: bold 14px Trebuchet MS,arial;
+}

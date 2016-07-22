@@ -1,0 +1,231 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+
+
+    <title>Stylish Text Maker for Facebook, Myspace, Forums and etc.</title>
+    
+    <link rel="stylesheet" href="https://olusegun-fapohunda-calculator.googlecode.com/svn/justnaira/autoscroll/text-maker-style.css" type="text/css">
+<script language="javascript">
+var normal=" abcdefghijklmnopqrstuvwxyz!?*<>.,=+-()"
+var changed=" αв¢∂єƒgнιנкℓмησρqяѕтυνωχуz!؟●«».,=+-()"
+var haxxor=" 48(d3f9h!jk1mn0pqr57uvwxy2!?*<>.,=+-()"
+var divchange=" ÁßČĎĔŦĞĤĨĴĶĹМŃŐРQŔŚŤÚVŴЖŶŹ!؟●«».,=+-()"
+var arabchange=" ค๒ς๔єŦﻮђเןкl๓ภ๏קợгรtยשฬץאz!؟●«».,=+-()"
+var azakchange=" äbċdëfġhïjklmnöpqrstüvwxÿż!?*<>.,=+-()"
+var stripechange=" ábćdéfghíjklmńőpqŕśtúvwxýź!?*<>.,=+-()"
+var spikechange=" ΛBᄃDΣFGΉIJΚᄂMПӨPQЯƧƬЦVЩXΥZ!?*◁▷.,=+-()"
+var bolchange=" ﾑ乃cd乇ｷgんﾉﾌズﾚﾶ刀oｱq尺丂ｲu√wﾒﾘ乙!?*<>.,=+-()"
+var smallbolchange=" ⓐⓑ©ⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝⓞⓟⓠⓡⓢⓣⓤⓥⓦⓧⓨⓩ!?⊛<>๏,⊜⊕⊝()"
+function change(_in, _out, _hax, _div, _arab, _azak, _stripe, _spike, _bol, _smallbol)
+
+{
+
+  var s="", hx="", dv="", ar="", az="", st="", sp="", bo="", sb="";
+
+  var n=_in.value.toLowerCase();
+
+
+
+  ///if (_in.value.length=="0") _arab.value="";
+
+  
+
+  for(i=0; i<n.length; i++)
+
+  {
+
+    var c=n.charAt(i);
+
+    for(j=0; (j<normal.length)&&(c!=normal.charAt(j)); j++);
+
+    if (j<normal.length) { 
+
+      s+=changed.charAt(j); hx+=haxxor.charAt(j); dv+=divchange.charAt(j); ar+=arabchange.charAt(j); az+=azakchange.charAt(j); st+=stripechange.charAt(j); sp+=spikechange.charAt(j); bo+=bolchange.charAt(j); sb+=smallbolchange.charAt(j);} else {
+
+      s+=c; hx+=c; dv+=c; ar+=c; az+=c; st+=c; sp+=c;
+
+    }
+
+  }
+  _out.value=s;
+  _hax.value=hx;
+  _div.value=dv;
+  _arab.value=ar;
+  _azak.value=az;
+  _stripe.value=st;
+  _spike.value=sp;
+  _bol.value=bo;
+  _smallbol.value=sb;
+}
+
+function breezah(_in, _out)
+{
+  var s="";
+  var n=_in.value.toLowerCase();
+  ///if (_in.value.length==0) return;  
+  for(i=0; i<n.length; i++)
+  {
+    var c=n.charAt(i);
+    s+=i%2?c:c.toUpperCase();
+  }
+  _out.value=s;
+}
+</script>
+<script language="Javascript">
+function focusFirst() {
+  if (els = oTD.getElementsByTagName("input")) {
+    els[0].focus();
+  }
+}
+function highlight(field) {
+	field.focus();
+  	field.select();
+}
+
+</script>
+<script>
+function textin_focus(e,o){
+if(o.firstTime){return}
+o.firstTime=true
+o.value=""
+}
+</script>
+
+</head><body topmargin="0" leftmargin="0" bgcolor="ffffff">
+<form name="generator">
+<table class="contenttable" cellpadding="0" cellspacing="0">
+<tbody><tr>
+
+<td width="100" align="center" height="40"><font class="font">Your Text:</font></td>
+
+<td id="oTD" width="400" height="40">
+
+<input style="color: black; font-weight: normal;" class="textmakerblue" name="textin" onclick="textin_focus(event,this); this.style.color='black'; this.style.fontWeight='normal'" value="Write your text here" onkeyup="change(textin, textout, texthax, textdiv, textarab, textazak, textstripe, textspike, textbol, textsmallbol); breezah(textin, textbre)" type="text">
+</td>
+
+</tr>
+<tr><td height="20"></td></tr>
+<tr>
+
+<td width="100" align="center" height="40"><font class="font">Style 1:</font></td>
+
+<td width="400" height="40">
+
+<input class="textmakergreen" name="textout" readonly="readonly" onclick="highlight(this);" type="text">
+
+</td>
+
+</tr>
+
+<tr>
+
+<td width="100" align="center" height="40"><font class="font">Style 2:</font></td>
+
+<td width="400" height="40">
+
+<input class="textmakergreen" name="textarab" readonly="readonly" onclick="highlight(this);" type="text">
+
+</td>
+
+</tr>
+<tr>
+
+<td width="100" align="center" height="40"><font class="font">Style 3:</font></td>
+
+<td width="400" height="40">
+
+<input class="textmakergreen" name="textbre" readonly="readonly" onclick="highlight(this);" type="text">
+
+</td>
+
+</tr>
+<tr>
+
+<td width="100" align="center" height="40"><font class="font">Style 4:</font></td>
+
+<td width="400" height="40">
+
+<input class="textmakergreen" name="textstripe" readonly="readonly" onclick="highlight(this);" type="text">
+
+</td>
+
+</tr>
+<tr>
+
+<td width="100" align="center" height="40"><font class="font">Style 5:</font></td>
+
+<td width="400" height="40">
+
+<input class="textmakergreen" name="textazak" readonly="readonly" onclick="highlight(this);" type="text">
+
+</td>
+
+</tr>
+<tr>
+
+<td width="100" align="center" height="40"><font class="font">Style 6:</font></td>
+
+<td width="400" height="40">
+
+<input class="textmakergreen" name="textdiv" readonly="readonly" onclick="highlight(this);" type="text">
+
+</td>
+
+</tr>
+<tr>
+
+<td width="100" align="center" height="40"><font class="font">Style 7:</font></td>
+
+<td width="400" height="40">
+
+<input class="textmakergreen" name="texthax" readonly="readonly" onclick="highlight(this);" type="text">
+
+</td>
+
+</tr>
+<tr>
+
+<td width="100" align="center" height="40"><font class="font">Style 8:</font></td>
+
+<td width="400" height="40">
+
+<input class="textmakergreen" name="textspike" readonly="readonly" onclick="highlight(this);" type="text">
+
+</td>
+
+</tr>
+<tr>
+
+<td width="100" align="center" height="40"><font class="font">Style 9:</font></td>
+
+<td width="400" height="40">
+
+<input class="textmakergreen" name="textbol" readonly="readonly" onclick="highlight(this);" type="text">
+
+</td>
+
+</tr>            
+
+<tr>
+
+<td width="100" align="center" height="40"><font class="font">Style 10:</font></td>
+
+<td width="400" height="40">
+
+<input class="textmakergreen" name="textsmallbol" readonly="readonly" onclick="highlight(this);" type="text">
+
+</td>
+
+</tr>
+
+
+</tbody></table>
+
+</form>
+<left> Copyright &copy; 2012 All Rights Reserved by <a
+ href="http://www.justnaira.com/">Just Naira</a>
+</left>
+</body></html>

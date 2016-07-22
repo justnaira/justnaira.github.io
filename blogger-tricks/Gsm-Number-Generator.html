@@ -1,0 +1,70 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GSM Phone Numbers Generator</title>
+<script type="text/javascript">
+Array.prototype.has = function(value) {
+	var i;
+	for (var i = 0, loopCnt = this.length; i < loopCnt; i++) {
+		if (this[i] == value) {
+			return true;
+		}
+	}
+	return false;
+};
+
+function makeGSM(){//this function generates gsm numbers
+var countx = prompt("No of GSM numbers to generate", "10");
+var delim = prompt("Separator", ",");
+var col = prompt("No of columns to display", "3");
+var row = prompt("Line break character", "<br>");
+var c=0;
+var d = new Date();
+starttime = d.getTime();
+count = (parseInt(countx)<=1) ? 1 : parseInt(countx);
+col = (parseInt(col)<=1) ? 1 : parseInt(col);
+list = new Array();
+//create an aray of valid four character gsm prefix
+pref = "0802,0803,0805,0806,0807,0808,0809,0812,0813,0815,0816,0817,0818,0819,0810,0702,0703,0704,0705,0706,0707,0708,0709";
+pref = pref.split(',');
+plen = pref.length;
+for(i=0; list.length < count; i++){
+	//select an index from the prefix array
+	rpref = Math.floor(Math.random()*plen)
+	len = list.length;
+	nu =  pref[rpref] + (Math.floor(Math.random()*9000000) + 1000000);
+	c = c + 1;
+	while (list.has(nu))
+	{
+		nu =  pref[rpref] + (Math.floor(Math.random()*9000000) + 1000000);
+		c = c + 1;
+	}
+	//join a prefix and a 7 digit number
+	list[len] = nu;
+}
+d = new Date();
+endtime = d.getTime();
+timetaken = (endtime - starttime)/1000;
+//output the result in a div
+var detail = 'Time taken: '+timetaken+' Seconds, Total Record: '+list.length+', Efficiency: '+parseInt((list.length*100)/c)+'%';
+c = 0;
+d = 0;
+mylist = new Array();
+while (c < list.length)
+{
+	tempArray = new Array();
+	for(i=0; i < col; i++){
+		tempArray[i] = list[c+i];
+	}
+	mylist[d] = tempArray.join(delim);
+	c = c + col;
+	d = d + 1;
+}
+document.getElementById('babies').innerHTML = detail+'<br>'+mylist.join(row);
+alert(detail);
+return false;
+}
+</script>
+</head>
+<body>
+<div align="center"><input onclick="return makeGSM();" value="Generate GSM Numbers" type="button" />
+<div id="babies" style="padding: 10px; word-wrap: break-word"></div></div></body>

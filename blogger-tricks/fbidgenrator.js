@@ -1,0 +1,1 @@
+function misster() { document.missterxwijaya.output.value = "graph.facebook.com/"+document.missterxwijaya.xwiejaya.value +"?fields=name,id"; window.location='http://'+document.missterxwijaya.output.value;}//
